@@ -1,0 +1,19 @@
+# mac file
+.DS_store
+
+# dot file
+.*.*
+.bash_history
+.viminfo
+
+# dot directory
+.*/
+
+# pycache
+__pycache__
+
+# data directory
+data/
+
+# notebook directory
+.ipynb_checkpoints/
