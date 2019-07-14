@@ -1,0 +1,2 @@
+model_checkpoint_path: "CLIP_model_final.ckpt"
+all_model_checkpoint_paths: "CLIP_model_final.ckpt"
