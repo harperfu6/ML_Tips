@@ -15,5 +15,10 @@ __pycache__
 # data directory
 data/
 
+# data file
+*.pkl
+*.gz
+
+
 # notebook directory
 .ipynb_checkpoints/

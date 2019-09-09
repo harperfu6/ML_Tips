@@ -3,6 +3,8 @@ import sys, os
 sys.path.append(os.pardir)
 
 import numpy as np
+import matplotlib.pyplot as plt
+
 from dataset.mnist import load_mnist
 from two_layer_net import TwoLayerNet
 
@@ -52,6 +54,19 @@ def main():
             train_acc_list.append(train_acc)
             test_acc_list.append(test_acc)
             print('train acc, test acc | {}, {}'.format(str(train_acc), str(test_acc)))
+
+    # 学習経過をグラフに描画
+    fig = plt.figure()
+    markers = {'train': 'o', 'test': 's'}
+    x = np.arange(len(train_acc_list))
+    plt.plot(x, train_acc_list, label='train acc')
+    plt.plot(x, test_acc_list, label='test acc', linestyle='--')
+    plt.xlabel('epochs')
+    plt.ylabel('accuracy')
+    plt.ylim(0, 1.0)
+    plt.legend(loc='lower right')
+    # plt.show()
+    fig.savefig('../images/accuracy_two_layer.png')
 
 if __name__ == '__main__':
     main()
