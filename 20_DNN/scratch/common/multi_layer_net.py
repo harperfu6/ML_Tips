@@ -5,7 +5,7 @@ sys.path.append('../../')
 
 import numpy as np
 from collections import OrderedDict
-from common layers import *
+from common.layers import *
 # from common.gradient import numerical_gradient
 
 
