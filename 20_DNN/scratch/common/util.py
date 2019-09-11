@@ -1,6 +1,7 @@
 # coding: utf-8
 import numpy as np
 
+
 def smooth_curve(x):
     """
     " 損失関数のグラフを滑らかにする

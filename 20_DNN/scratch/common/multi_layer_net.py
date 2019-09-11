@@ -112,7 +112,7 @@ class MultiLayerNet:
         self.loss(x, t)
 
         # backward
-        dout = 1 # 正解の教師データは1であるため（予測値yは1に近ければ良い（エントロピー誤差で評価））
+        dout = 1 # 損失関数Lについて（dL/dL=1）であるため
         dout = self.last_layer.backward(dout)
 
         layers = list(self.layers.values())
